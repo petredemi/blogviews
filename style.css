@@ -1,0 +1,9 @@
+body{
+    background-color: blanchedalmond;
+}
+.user{
+    border: 1px solid black;
+    margin: 3px;
+    background-color: darkseagreen;
+    max-width: 500px;
+}
