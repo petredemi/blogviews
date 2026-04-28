@@ -3,27 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <script src="script.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://malsup.github.io/jquery.form.js"></script> 
     <link rel="stylesheet" href="style.css">
 
     <title>personal blog</title>
 </head>
 <body>
-    <h2>wellcome on my blog </h2>
-    <form action="">
-        <label for="name">
-            name
-            <input type="text" name="name" id="name">
-        </label>
-        <label for="email">
-            email
-            <input type="email" name="email" id="email">
-        </label>
-        <button type="submit" >submit</button>
-    </form>
-    <div class="users"></div>
+<div class="app">
+    <div class="top">
+        <h1>Blog about travel experiences </h1>
+        <div class="personal">
+            <div class="userpict"></div>
+            <h4 id="logedin"></h4>
+        </div>
+       
+    </div>
+    <div class="buttons">
+            <button id="signup">sign up</button>
+            <button id="login"> log in</button>
+            <button id="logout">log out</button>
+            <button id="uploadpic">profile picture</button>
+            <button id="reqmembbtn">request auth</button>
+    </div>
+    <div class="signupdiv">
+            <form  id="signupform" action="https://myblog-62pt.onrender.com/user" method="post" >
+                <li>
+                    <label for="newname">name</label>
+                    <input type="text" name="newname" id="newname">
+                </li>
+                <li>
+                    <label for="newemail">email </label>
+                    <input type="email" name="newemail" id="newemail">
+                </li>
+                <li>
+                    <label for="newpassword" class="label">pasword  </label>
+                    <input type="password" name="newpassword" id="newpassword">
+                </li>
+                <li>
+                    <label for="newprofession" class="label">profession</label>
+                    <input type="text" name="newprofession" id="newprofession">
+                </li>
+                <li>
+                    <label for="requestauth"> do you want to become an author </label>
+                    <input type="checkbox" name="requestauth" id="requestauth"  >
+                </li>
+                <button type="submit" style="width: 60px;"  id="signupuser">submit</button>
+            </form>
+        </div> 
+        <div class="logindiv">
+            <form id="loginform" action="https://myblog-62pt.onrender.com/log-in" method="post">
+                <li>
+                    <label for="logemail">email </label>
+                    <input type="email" name="logemail" id="logemail">
+                </li>
+                <li>
+                    <label for="logpassword" class="label">password  </label>
+                    <input type="password" name="logpassword" id="logpassword">
+                </li>
+                <button type="submit" style="width: 60px;"  id="loguser">submit</button>
+            </form>
+        </div>
+        <div class="uploadprofiles">
+            <form class="uploadImage"  action="https://myblog-62pt.onrender.com/picture" method="post" enctype="multipart/form-data">
+                <li style="font-size: 0.8rem;">max-size 1Mb, recomended dimension 200 x 200 px </li>
+                <input type="file" name="profileimg"  id="profileimg" />
+                <input type="submit" value="upload img" class="uploadbtn" style="width: fit-content;">
+            </form>    
+        </div>
+
+        <div class="memberreqdiv">
+            <form  id="requestform" action="https://myblog-62pt.onrender.com/user/memberrequest" method="post" >
+                <li style="font-size: 0.8rem;">requires blog administrator aproval</li>
+                <li>
+                    <label for="memprofession" class="label">profession</label>
+                    <input type="text" name="memprofession" id="memprofession">
+                </li>
+                <li>
+                    <label for="requestmember"> do you want to become a blog author </label>
+                    <input type="checkbox" name="requestmember" id="requestmember" value="true" >
+                </li>
+                <button type="submit" style="width: 60px;"  id="submitreqmem" value= 'Submit'>submit</button>
+            </form>
+        </div> 
+    <div class="authorslist">
+            <h2>blog authors</h2>
+            <div class="users"></div>
+    </div>
+    <div class="postslist">
+        <div class="posts"></div>
+    </div>
     <div id="newuser"></div>
-    
+    <div id="div1"></div>
+    <div class="travell">
+        <h2>around the world</h2>
+        <p class="text">
+        <img src="picture/travelgoldengate.jpg" width="300px" alt="">
+        <h3>Golden Gate</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </div>
+    <div class="interiordesign">
+        <h2>about interior design</h2>
+        <p class="text">
+        <img src="picture/interiordesign2.jpg" width="300px" alt="">
+        <h3>Living room</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </div>
+
+</div>
 </body>
 </html>

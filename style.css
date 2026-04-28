@@ -1,9 +1,258 @@
 body{
     background-color: blanchedalmond;
 }
-.user{
-    border: 1px solid black;
+.app{
+    background-color: darkcyan;
+    max-width: 800px;
+    margin: auto;
+    padding:10px
+}
+h1{
+    margin: 20px;
+}
+h4{
+    margin: 1px;
+}
+h5{
+    margin: 2px;
+}
+h6{
+    margin-top: 50pxx;
+}
+.top{
+    background-color: antiquewhited;
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+}
+.personal{
+    height: fit-content;
+    float: rightt;
+    display: none;
+    margin-right: 20px;
+    text-align: end;
+}
+.userpict{
+    margin-top: 20px;
+    height: 80px;
+ 
+}
+.personal >.userpict > img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 2px;
+    border: 1px solid blue;
+    background-color:antiquewhite;
+}
+
+#logout, #uploadpic, #reqmembbtn{
+    display: none;
+}
+.signupdiv, .logindiv, .uploadprofiles, .memberreqdiv{
+    background-color: antiquewhite;
+    max-width: 360px;
+    padding: 3px;
+    margin: 5px;
+    display: none;
+    position: absolute;
+}
+label{
+    min-width:80px;
+}
+li{
+    display: flex;
+    list-style-type: none;
+    margin: 8px;
+    justify-content: space-between;
+}
+input{
+    width: 230px;
+}
+#requestauth, #requestmember{
+    width: auto;
+}
+.authorslist{
+    border: 1px solid redd;
+    margin: 10px;
+    padding: 10px;
+    display: none;
+    background-image: url('picture/travelgreece.jpg');
+    background-position:bottom;
+    background-size: cover;
+}
+.users{
+    display: flex;
+    max-width: 650px;
+    flex-wrap: wrap;
+}
+.author{
+    width: 130px;
+    min-height: 180px;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.634);
+    padding: 4px;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.author > div{
+    width: 90px;
+    height: 90px;
+}
+.author > h6{
+    margin-top: 20px;
+    margin-bottom: 2px;
+    font-size: 0.8rem;
+    background-color: rgb(255, 47, 47);
+}
+.author > img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.author >p {
+    margin: 1px;
+    font-size: 0.8rem;
+}
+.postslist{
+    width: 100%d;
+}
+.post{
+    max-width: 600px;
+    height: fit-content;
+    font-size: 0.9rem;
+    position: relative;
+    background-color: cadetblue;
+    padding: 5px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-betweend;
+    flex-wrap: wrap;
+}
+
+.postcontent{
+    padding: 5px;
+    max-width: auto;
+    min-height:100pxx;
+    position: relative;
+    height: fit-content;
+    padding: 1px;
+}
+
+.postcontent > img{
+    max-width: 300px;
+    max-height: 300px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+.post > p{
+    margin: 5px;
+    margin-left: 30px;
+    font-size: 0.95rem;
+}
+.post > h5{
+    text-align: end;
     margin: 3px;
-    background-color: darkseagreen;
-    max-width: 500px;
+}
+.authdate{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.pdate{
+    font-size: 0.85rem;
+}
+.postbuttons{
+    text-align: end;
+}
+
+
+.comments{
+    display: none;
+    text-align: end;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: end;
+    position:absolute;
+    justify-content:right;
+    right: 0;
+    margin-right: 10px;
+    top: 100%;
+    z-index: 1;
+}
+.commentx{
+    background-color: rgba(25, 14, 46, 0.634);
+    border: 1px solid black;
+    color: lightgoldenrodyellow;
+    max-width: 400px;
+    margin: 5px;
+    min-width: 340px;
+    border-radius: 10px;
+    padding: 5px;
+    min-height: 50px;
+}
+.commentx  h5{
+    margin: 5px;
+}
+.commentx > .authanddate{
+    display: flex;
+    background-color: rgb(40, 81, 81)dd;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.commentx .msgdate{
+    font-size: 0.70rem;
+}
+.commentx .formcontainer{
+    display: block;
+    position: relative;
+    min-width: 380px;
+}
+.commentform{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    right:2%;
+    padding: 5px;
+    border: 2px solid grey;
+    border-radius: 10px;
+}
+#commenttext{
+    background-color: white;
+    padding: 5px;
+    border: none;
+
+}
+
+.submitcom{
+    width: 60px;
+}
+.delcomment{
+    display: none;
+}
+
+.message{
+    border: 1px solid black;
+    max-width: 400px;
+    padding: 5px;
+    margin: 10px;
+}
+.travell{
+    margin: 10px;
+    height: auto;
+    padding: 10px;
+}
+.text img{
+    float: left;
+    margin-right: 20px;
 }
