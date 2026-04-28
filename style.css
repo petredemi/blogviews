@@ -1,14 +1,16 @@
 body{
-    background-color: blanchedalmond;
+    background-color: rgb(252, 245, 234);
+    font-size: 18px;
 }
 .app{
-    background-color: darkcyan;
+    background-color: rgb(229, 248, 248ddf);
     max-width: 800px;
     margin: auto;
     padding:10px
 }
 h1{
     margin: 20px;
+    color: rgb(38, 8, 51);
 }
 h4{
     margin: 1px;
@@ -125,15 +127,16 @@ input{
     height: fit-content;
     font-size: 0.9rem;
     position: relative;
-    background-color: cadetblue;
-    padding: 5px;
+    background-color: rgb(231, 248, 249);
+    padding: 10px;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 25px;
     margin-bottom: 1px;
     display: flex;
     flex-direction: column;
     justify-content: space-betweend;
     flex-wrap: wrap;
+    box-shadow: 2px 2px 15px black;
 }
 
 .postcontent{
@@ -171,6 +174,7 @@ input{
 }
 .postbuttons{
     text-align: end;
+    margin: 10px;
 }
 
 
