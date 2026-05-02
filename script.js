@@ -245,7 +245,7 @@ function getBlogAuthors(){
                     
                   </div>
               `).join(' ')} `)
-            $(`#${377}`).children('h6').text('blog admin')
+            $("#1").children('h6').text('blog admin')
            //   uploadProfilePic()
         }
 

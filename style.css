@@ -1,12 +1,15 @@
 body{
     background-color: rgb(252, 245, 234);
-    font-size: 18px;
+    font-size: 20px;
 }
 .app{
     background-color: rgb(229, 248, 248ddf);
     max-width: 800px;
     margin: auto;
     padding:10px
+}
+button{
+    font-size: 0.9rem;
 }
 h1{
     margin: 20px;
@@ -62,6 +65,7 @@ h6{
 }
 label{
     min-width:80px;
+    font-size: 0.95rem;
 }
 li{
     display: flex;
@@ -75,14 +79,36 @@ input{
 #requestauth, #requestmember{
     width: auto;
 }
+.intro{
+    margin-top: 10px;
+}
+.intro >p{
+    font-size: 1rem;
+    margin: 5px;
+}
 .authorslist{
     border: 1px solid redd;
     margin: 10px;
     padding: 10px;
     display: none;
-    background-image: url('picture/travelgreece.jpg');
+    background-image: url('picture/travelgreece.jpg')mm;
+    background-color: cadetblue;
     background-position:bottom;
     background-size: cover;
+}
+.authorsheader{
+    display: flex;
+    justify-content: space-between;
+}
+.authorsheader > p{
+    font-size: 0.9rem;
+    margin: 2px;
+    background-color: rgb(247, 232, 214);
+    max-width: 250px;
+    padding: 4px;
+}
+.authorsheader >h2{
+    margin: 2px;
 }
 .users{
     display: flex;
@@ -251,10 +277,11 @@ input{
     padding: 5px;
     margin: 10px;
 }
-.travell{
+.travell, .interiordesign{
     margin: 10px;
     height: auto;
     padding: 10px;
+    font-size: 1rem;
 }
 .text img{
     float: left;

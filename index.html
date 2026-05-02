@@ -8,12 +8,12 @@
     <script src="https://malsup.github.io/jquery.form.js"></script> 
     <link rel="stylesheet" href="style.css">
 
-    <title>personal blog</title>
+    <title>European Cuisine, European Savory</title>
 </head>
 <body>
 <div class="app">
     <div class="top">
-        <h1>Blog about travel </h1>
+        <h1>European cuisine</h1>
         <div class="personal">
             <div class="userpict"></div>
             <h4 id="logedin"></h4>
@@ -65,6 +65,15 @@
                 <button type="submit" style="width: 60px;"  id="loguser">submit</button>
             </form>
         </div>
+        <div class="intro">
+            <p><b>European cuisine</b> <em>is diverse and varies by country, but it generally features fresh, seasonal
+            ingredients, bold flavors, and a variety of cooking techniques. Europe's kitchen has a large variety of dishes because 
+            it comprise more than 30 countries, each one with their own styles and culinary habits. 
+            European cuisine uses fresh, locally sourced ingredients like fruits, vegetables, meats, and seafood. 
+            Meat is more prominent in European cuisine than in East Asian cooking, and dairy products are also widely used. </em></p>
+            <p><b>Sign in </b><em>if you want to add coments or post local dishes, food and cooking styles. Post your 
+                favorit food, and your culinary experiences from europe.  </em></p>
+        </div>
         <div class="uploadprofiles">
             <form class="uploadImage"  action="https://myblog-62pt.onrender.com/picture" method="post" enctype="multipart/form-data">
                 <li style="font-size: 0.8rem;">max-size 1Mb, recomended dimension 200 x 200 px </li>
@@ -78,7 +87,7 @@
                 <li style="font-size: 0.8rem;">requires blog administrator aproval</li>
                 <li>
                     <label for="memprofession" class="label">profession</label>
-                    <input type="text" name="memprofession" id="memprofession">
+                    <input type="text" name="memprofession" id="memprofession" required>
                 </li>
                 <li>
                     <label for="requestmember"> do you want to become a blog author </label>
@@ -88,7 +97,11 @@
             </form>
         </div> 
     <div class="authorslist">
-            <h2>blog authors</h2>
+            <div class=" authorsheader">
+                <h2>blog authors</h2>
+                <p>do you want to post on the blog? you should make a request to be approved</p>
+                
+            </div>
             <div class="users"></div>
     </div>
     <div class="postslist">
@@ -98,10 +111,10 @@
     <div id="div1"></div>
     <div class="travell">
         <h2>around the world</h2>
-        <p class="text">
+        <p class="text" style="font-size: 0.9rem;">
         <img src="picture/travelgoldengate.jpg" width="300px" alt="">
         <h3>Golden Gate</h3>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            Loipsum dolor sit amet, consectetur adipiscing elit, 
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
