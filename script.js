@@ -213,8 +213,6 @@ function getBlogAuthors(){
             let logeduserData = data.authData.user
             sessionexpire = data.authData.exp
             logeduser = logeduserData.id
-            console.log(authors)
-            console.log(logeduserData)
             if( logeduser != undefined){
                 $("#signup").hide()
                 $("#login").hide()
@@ -246,6 +244,8 @@ function getBlogAuthors(){
                   </div>
               `).join(' ')} `)
             $("#1").children('h6').text('blog admin')
+            $('.whattoeat').hide()
+            $('.intro1').hide()
            //   uploadProfilePic()
         }
 
