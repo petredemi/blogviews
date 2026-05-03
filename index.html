@@ -71,6 +71,29 @@
                 <button type="submit" style="width: 60px;"  id="loguser">submit</button>
             </form>
         </div>
+                <div class="uploadprofiles">
+            <form class="uploadImage"  action="https://myblog-62pt.onrender.com/picture" method="post" enctype="multipart/form-data">
+                <li style="font-size: 0.8rem;">max-size 1Mb, recomended dimension 200 x 200 px </li>
+                <input type="file" name="profileimg"  id="profileimg" />
+                <input type="submit" value="upload img" class="uploadbtn" style="width: fit-content;">
+            </form>    
+        </div>
+
+        <div class="memberreqdiv">
+            <form  id="requestform" action="https://myblog-62pt.onrender.com/user/memberrequest" method="post" >
+                <li style="font-size: 0.8rem;">requires blog administrator aproval</li>
+                <li>
+                    <label for="memprofession" class="label">profession</label>
+                    <input type="text" name="memprofession" id="memprofession" required>
+                </li>
+                <li>
+                    <label for="requestmember"> do you want to become a blog author </label>
+                    <input type="checkbox" name="requestmember" id="requestmember" value="true" >
+                </li>
+                <button type="submit" style="width: 60px;"  id="submitreqmem" value= 'Submit'>submit</button>
+            </form>
+        </div> 
+
         <div class="intro">
             <p><b>European cuisine</b> <em>is diverse and varies by country, but it generally features fresh, seasonal
             ingredients, bold flavors, and a variety of cooking techniques. Europe's kitchen has a large variety of dishes because 
@@ -96,28 +119,6 @@
 
                 </ul>
         </div>
-        <div class="uploadprofiles">
-            <form class="uploadImage"  action="https://myblog-62pt.onrender.com/picture" method="post" enctype="multipart/form-data">
-                <li style="font-size: 0.8rem;">max-size 1Mb, recomended dimension 200 x 200 px </li>
-                <input type="file" name="profileimg"  id="profileimg" />
-                <input type="submit" value="upload img" class="uploadbtn" style="width: fit-content;">
-            </form>    
-        </div>
-
-        <div class="memberreqdiv">
-            <form  id="requestform" action="https://myblog-62pt.onrender.com/user/memberrequest" method="post" >
-                <li style="font-size: 0.8rem;">requires blog administrator aproval</li>
-                <li>
-                    <label for="memprofession" class="label">profession</label>
-                    <input type="text" name="memprofession" id="memprofession" required>
-                </li>
-                <li>
-                    <label for="requestmember"> do you want to become a blog author </label>
-                    <input type="checkbox" name="requestmember" id="requestmember" value="true" >
-                </li>
-                <button type="submit" style="width: 60px;"  id="submitreqmem" value= 'Submit'>submit</button>
-            </form>
-        </div> 
     <div class="authorslist">
             <div class=" authorsheader">
                 <p>do you want to post on the blog? you should make a request to be approved</p>
