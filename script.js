@@ -186,7 +186,6 @@ async function tryApi(){
     });
 console.log(response)
 const text = await response.text();
-console.log(text + 'ewgferfger');
 }
 //tryApi()
 
@@ -213,7 +212,6 @@ function getBlogAuthors(){
             let logeduserData = data.authData.user
             sessionexpire = data.authData.exp
             logeduser = logeduserData.id
-            console.log(logeduserData)
             if( logeduser != undefined){
                 $("#signup").hide()
                 $("#login").hide()
@@ -283,11 +281,9 @@ function getBlogArticles(){
                 success: function(data, status){
                 // const token = localStorage.getItem('blogposttoken')
                 if(status == 'success'){
-                    console.log(data)
                     const authData = data.authData
                     const posts = data.messages
                     let authx = data.authornames
-                    console.log(authx)
                     function findName(y){
                         let us = authx.find(x => x.id == y)
                          return us.name
