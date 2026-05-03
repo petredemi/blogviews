@@ -1,12 +1,16 @@
 body{
     background-color: rgb(252, 245, 234);
     font-size: 20px;
+    padding: 0px;
+    margin: 0px;
 }
 .app{
     background-color: rgb(229, 248, 248ddf);
+    width: 100%s;
     max-width: 800px;
     margin: auto;
-    padding:10px
+    padding:1px;
+    
 }
 button{
     font-size: 0.9rem;
@@ -97,14 +101,14 @@ input{
     background-size: cover;
 }
 .authorsheader{
-    display: flex;
+    display: flexc;
     justify-content: space-between;
 }
 .authorsheader > p{
     font-size: 0.9rem;
     margin: 2px;
     background-color: rgb(247, 232, 214);
-    max-width: 250px;
+    max-width: 500px;
     padding: 4px;
 }
 .authorsheader >h2{
@@ -278,29 +282,32 @@ input{
     margin: 10px;
 }
 .food{
-    position: relative;
-    margin-bottom: 2px;
-    display:flex;
-    flex-wrap: wrap;
+    position: relativek;
+    margin: 2px;
     max-width: 900px;
 }
 .itm{
-    width: 100%;
+    margin: 1px;
     display: flex;
+    padding: 2px;
+
 }
+.text{
+    font-size: 0.9rem;
+}
+
 .item{
     margin-top: 1px;
     height: auto;
-    max-width: 600px;
+    max-width: 500px;
     padding: 10px;
     font-size: 1rem;
-    margin-bottom: 1px;
+    margin: 5px;
 }
 .text img{
-    float: leftm;
     margin-right: 10px;
     margin-bottom: 5px;
-    max-height: 270px;
+    max-height: 250px;
 }
 .whattoeat{
     font-size: 0.95rem;
@@ -310,5 +317,19 @@ footer{
     text-align: center;
     background-color: rgb(181, 181, 185);
     padding: 10px;
-    margin-top: 2px;
+    width: 100%;
+
+}
+footer p{
+    width: fit-content;
+    margin: auto;
+}
+@media (max-width: 450px) {
+    .app{
+        width: 100vwd;
+        margin: 0px;
+    }
+  .pict {
+    width: calc(100% - 20px);
+  }
 }
