@@ -1,3 +1,8 @@
+.dceer{
+    border: 1px solid red;
+    margin: 4px;
+}
+
 body{
     background-color: rgb(252, 245, 234);
     font-size: 20px;
@@ -13,7 +18,10 @@ body{
     
 }
 button{
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+}
+.buttons{
+    margin-left: 20px;
 }
 h1{
     margin: 20px;
@@ -36,7 +44,6 @@ h6{
 }
 .personal{
     height: fit-content;
-    float: rightt;
     display: none;
     margin-right: 20px;
     text-align: end;
@@ -85,10 +92,12 @@ input{
 }
 .intro{
     margin-top: 10px;
+    line-height: 1.2;
 }
 .intro >p{
     font-size: 1rem;
     margin: 5px;
+    padding: 10px;
 }
 .linktoblog{
     display: none;
@@ -288,9 +297,11 @@ input{
     margin: 10px;
 }
 .food{
-    position: relativek;
     margin: 2px;
     max-width: 900px;
+}
+.food >h2{
+    margin-left: 20px;
 }
 .itm{
     margin: 1px;
@@ -305,8 +316,8 @@ input{
 .item{
     margin-top: 1px;
     height: auto;
-    max-width: 500px;
-    padding: 10px;
+    max-width: 600px;
+    padding: 5px;
     font-size: 1rem;
     margin: 5px;
 }
@@ -322,9 +333,6 @@ footer{
     font-size: 0.9rem;
     text-align: center;
     background-color: rgb(181, 181, 185);
-    padding: 10px;
-    width: 100%;
-
 }
 footer p{
     width: fit-content;
