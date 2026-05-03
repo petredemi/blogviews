@@ -106,7 +106,6 @@ input{
     background-color: rgb(179, 250, 226);
 }
 .authorslist{
-    border: 1px solid redd;
     margin: 10px;
     padding: 10px;
     display: none;
