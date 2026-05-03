@@ -213,6 +213,7 @@ function getBlogAuthors(){
             let logeduserData = data.authData.user
             sessionexpire = data.authData.exp
             logeduser = logeduserData.id
+            console.log(logeduserData)
             if( logeduser != undefined){
                 $("#signup").hide()
                 $("#login").hide()
@@ -247,6 +248,10 @@ function getBlogAuthors(){
             $('.whattoeat').hide()
             $('.intro1').hide()
            //   uploadProfilePic()
+           if(logeduserData.blogauthor){
+              $('.linktoblog').show()
+              $('.authorsheader').children('p').hide()
+           }
         }
 
         },

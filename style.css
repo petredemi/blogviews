@@ -90,6 +90,12 @@ input{
     font-size: 1rem;
     margin: 5px;
 }
+.linktoblog{
+    display: none;
+    font-size: 0.9rem;
+    margin: 10px;
+    background-color: rgb(179, 250, 226);
+}
 .authorslist{
     border: 1px solid redd;
     margin: 10px;
