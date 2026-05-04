@@ -114,6 +114,7 @@ $("#signupform").off('submit').submit(function(){
              console.log(response)
              console.log(requestaut.length)
              localStorage.setItem('blogposttoken', response.token)
+             document.querySelector('.spinner').style.display = 'flex';
             $("#signup").hide()
             $("#login").hide()
             $("#logout").show()
@@ -124,11 +125,6 @@ $("#signupform").off('submit').submit(function(){
             //getBlogArticles()
            }
        });
-      //  $('#newname').val('')
-      //  $('#newemail').val('')
-      //  $('#newpassword').val('')
-      //  $('#newprofession').val('')
-      document.querySelector('.spinner').style.display = 'flex';
         $('#requestaut').toggle('checked')
         $(".signupdiv").hide()
       $("#signupform")[0].reset()
@@ -153,21 +149,13 @@ $("#signupform").off('submit').submit(function(){
                           return
                 }
              localStorage.setItem('blogposttoken',await response.token)
-             console.log(response)
-             console.log((localStorage.getItem('blogposttoken') != undefined))         
-              //  $("#signup").hide()
-              //  $("#login").hide()
-              //  $("#logout").show()
-              //  $("#uploadpic").show()
+             document.querySelector('.spinner').style.display = 'flex';
+  
               location.reload()
                // getBlogArticles()
               //  getBlogAuthors()
-            //console.log(response)
            }
        });
-          //  $('#logemail').val('')
-          //  $('#logpassword').val('')
-          document.querySelector('.spinner').style.display = 'flex';
             $("#loginform")[0].reset()
             $(".logindiv").slideUp("slow")
           return false
@@ -175,7 +163,7 @@ $("#signupform").off('submit').submit(function(){
  $("#logout").click(function(){
         localStorage.removeItem('blogposttoken')
         document.querySelector('.spinner').style.display = 'none';
-        location.reload(true)
+        location.reload()
     }); 
 
 async function tryApi(){
@@ -335,7 +323,6 @@ function getBlogArticles(){
     })
 }
 getBlogArticles()
-console.log(logeduser)
 async function getPostComments(x){
     const token = localStorage.getItem('blogposttoken')
     $.ajax({
@@ -374,10 +361,7 @@ async function getPostComments(x){
 function mouseOverPosts(){
         $(".post").on('mouseover', function () {
                 let t = ($(this).attr('id')).slice(4)
-              //  let x = $(this).attr('class') // get post id author from class
-              //  au = Number(x.slice(5))
                 tm = Number(t)
-                console.log(tm)
             $(`#post${tm}`).find('.postcomments').off('click').on('click',function(){
                 $(`#post${tm}`).children(".comments").show()
                 $(`#formc${tm}`).children().hide()
@@ -470,7 +454,6 @@ async function addComments(){
            data: {commenttextt: txt},
            success: function(response){
              console.log('comment uploaded and form submitted'); 
-             console.log(response)  
             $(`#formc${tm}`).children().remove()
 
            }
@@ -494,8 +477,7 @@ async function delCommentId(){
             "Authorization": "Bearer "+ token,
         },
         success: function(data, status){
-            console.log(data)
-            console.log(status)
+          console.log(status)
        }
     })
       $(`#come${c}`).remove()
@@ -520,7 +502,6 @@ async function delCommentId(){
            },
            success: function(response){
              console.log('request sent and form submitted'); 
-             console.log(response)  
             $("#requestform")[0].reset()
             $(`#${logeduser}`).find('p').text(profession)
            }
