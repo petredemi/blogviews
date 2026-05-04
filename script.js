@@ -120,9 +120,9 @@ $("#signupform").off('submit').submit(function(){
             $("#logout").show()
             $("#uploadpic").show()
             $("#reqmembbtn").show()
-       //     location.reload(true)
-            getBlogAuthors()
-            getBlogArticles()
+            location.reload()
+           // getBlogAuthors()
+            //getBlogArticles()
            }
        });
       //  $('#newname').val('')
@@ -149,20 +149,20 @@ $("#signupform").off('submit').submit(function(){
             },
            success: async function(response){
              console.log('comment uploaded and form submitted'); 
-              if(response.token == undefined){
+              if(await response.token == undefined){
                           return
                 }
-             localStorage.setItem('blogposttoken', response.token)
+             localStorage.setItem('blogposttoken',await response.token)
              console.log(response)
              console.log((localStorage.getItem('blogposttoken') != undefined))         
               //  $("#signup").hide()
               //  $("#login").hide()
               //  $("#logout").show()
               //  $("#uploadpic").show()
-              location.reload(true)
-           //     getBlogArticles()
-            //    getBlogAuthors()
-            console.log(response)
+              location.reload()
+               // getBlogArticles()
+              //  getBlogAuthors()
+            //console.log(response)
            }
        });
           //  $('#logemail').val('')
