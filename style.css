@@ -11,10 +11,9 @@ body{
 }
 #loader {
   position: fixed;
-  width: 90px;
-  height: 90px;
-  top: 25%;
-  left: 45%;
+  width: 100%;
+  top: 15%;
+  left: 40%s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,8 +22,8 @@ body{
 .spinner{
     border: 4px solid rgb(47, 41, 41);
     display: none;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     border-left-color: rgb(246, 49, 72);
     animation: spinner 1s ease-in-out infinite;
