@@ -6,7 +6,6 @@ let tm  //get post id number
 let logeduser
 let sessionexpire
 
-
 function addDate(d){
         let day = new Date(d.createdAt)
         let month = ['null','Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -129,6 +128,7 @@ $("#signupform").off('submit').submit(function(){
       //  $('#newemail').val('')
       //  $('#newpassword').val('')
       //  $('#newprofession').val('')
+      document.querySelector('.spinner').style.display = 'flex';
         $('#requestaut').toggle('checked')
         $(".signupdiv").hide()
       $("#signupform")[0].reset()
@@ -167,12 +167,14 @@ $("#signupform").off('submit').submit(function(){
        });
           //  $('#logemail').val('')
           //  $('#logpassword').val('')
+          document.querySelector('.spinner').style.display = 'flex';
             $("#loginform")[0].reset()
             $(".logindiv").slideUp("slow")
           return false
     });
  $("#logout").click(function(){
         localStorage.removeItem('blogposttoken')
+        document.querySelector('.spinner').style.display = 'none';
         location.reload(true)
     }); 
 
@@ -206,6 +208,7 @@ function getBlogAuthors(){
            "Authorization": "Bearer " +token,
            },
         success: (data, status) =>{
+          //document.querySelector('.spinner').style.display = 'flex';
             if(status == 'success'){
             let authors = data.authors
             logeduser = data.authData.user.id
@@ -246,6 +249,7 @@ function getBlogAuthors(){
             $('.whattoeat').hide()
             $('.intro1').hide()
            //   uploadProfilePic()
+          // document.querySelector('.spinner').style.display = 'none';
            if(logeduserData.blogauthor){
               $('.linktoblog').show()
               $('.authorsheader').children('p').hide()
