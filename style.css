@@ -11,16 +11,16 @@ body{
 }
 #loader {
   position: fixed;
-  width: 100%;
   top: 15%;
-  left: 40%s;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 8; /* Ensure it stays on top */
 }
 .spinner{
-    border: 4px solid rgb(47, 41, 41);
+    border: 4px solid rgb(62, 12, 66);
     display: none;
     width: 60px;
     height: 60px;
@@ -39,7 +39,6 @@ body{
 
 .app{
     background-color: rgb(229, 248, 248ddf);
-    width: 100%s;
     max-width: 800px;
     margin: auto;
     padding:1px;
