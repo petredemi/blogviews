@@ -120,9 +120,9 @@ $("#signupform").off('submit').submit(function(){
             $("#logout").show()
             $("#uploadpic").show()
             $("#reqmembbtn").show()
-            location.reload()
-           // getBlogAuthors()
-            //getBlogArticles()
+           // location.reload()
+            getBlogAuthors()
+            getBlogArticles()
            }
        });
         $('#requestaut').toggle('checked')
@@ -151,9 +151,9 @@ $("#signupform").off('submit').submit(function(){
              localStorage.setItem('blogposttoken',await response.token)
              document.querySelector('.spinner').style.display = 'flex';
   
-              location.reload()
-               // getBlogArticles()
-              //  getBlogAuthors()
+              //location.reload()
+              getBlogAuthors()
+              getBlogArticles()
            }
        });
             $("#loginform")[0].reset()
@@ -237,7 +237,7 @@ function getBlogAuthors(){
             $('.whattoeat').hide()
             $('.intro1').hide()
            //   uploadProfilePic()
-          // document.querySelector('.spinner').style.display = 'none';
+           document.querySelector('.spinner').style.display = 'none';
            if(logeduserData.blogauthor){
               $('.linktoblog').show()
               $('.authorsheader').children('p').hide()

@@ -46,6 +46,7 @@ body{
 }
 button{
     font-size: 0.95rem;
+    padding: 3px;
 }
 .buttons{
     margin-left: 20px;
@@ -64,10 +65,13 @@ h6{
     margin-top: 50pxx;
 }
 .top{
-    background-color: antiquewhited;
+    background-color:rgb(213, 234, 215);
     display: flex;
     justify-content: space-between;
     height: 120px;
+    margin-bottom: 10px;
+    padding: 6px;
+    box-shadow: 1px 1px 10px black;
 }
 .personal{
     height: fit-content;
@@ -94,12 +98,13 @@ h6{
     display: none;
 }
 .signupdiv, .logindiv, .uploadprofiles, .memberreqdiv{
-    background-color: antiquewhite;
+    background-color: rgb(250, 242, 232);
     max-width: 360px;
-    padding: 3px;
+    padding: 8px;
     margin: 5px;
     display: none;
     position: absolute;
+    box-shadow: 1px 1px 8px darkblue;
 }
 label{
     min-width:80px;
@@ -265,7 +270,7 @@ input{
 .commentx{
     background-color: rgba(25, 14, 46, 0.634);
     border: 1px solid black;
-    color: lightgoldenrodyellow;
+    color: white;
     max-width: 400px;
     margin: 5px;
     min-width: 340px;
