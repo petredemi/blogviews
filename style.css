@@ -64,14 +64,18 @@ h5{
 h6{
     margin-top: 50pxx;
 }
-.top{
+.tophead{
     background-color:rgb(213, 234, 215);
+    box-shadow: 1px 1px 10px black;
+    padding-bottom: 5px;
+}
+.top{
+    
     display: flex;
     justify-content: space-between;
     height: 120px;
     margin-bottom: 10px;
     padding: 6px;
-    box-shadow: 1px 1px 10px black;
 }
 .personal{
     height: fit-content;
