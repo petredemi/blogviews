@@ -68,13 +68,14 @@ h6{
     background-color:rgb(213, 234, 215);
     box-shadow: 1px 1px 10px black;
     padding-bottom: 5px;
+    margin-bottom: 20px;
 }
 .top{
     
     display: flex;
     justify-content: space-between;
     height: 120px;
-    margin-bottom: 10px;
+    margin-bottom: 30pxdd;
     padding: 6px;
 }
 .personal{
@@ -127,18 +128,23 @@ input{
     width: auto;
 }
 .intro{
-    margin-top: 10px;
-    line-height: 1.2;
+    margin-top: 1px;
 }
 .intro >p{
     font-size: 1rem;
     margin: 5px;
     padding: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    line-height: 1.4;
+}
+.intro1{
+    padding-top: 1px;
 }
 .linktoblog{
     display: none;
     font-size: 0.9rem;
-    margin: 10px;
+    margin: 5px;
     background-color: rgb(179, 250, 226);
 }
 .authorslist{
@@ -205,7 +211,9 @@ input{
 .post{
     max-width: 600px;
     height: fit-content;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    line-height: 1.4;
+    font-style: italic;
     position: relative;
     background-color: rgb(231, 248, 249);
     padding: 10px;
@@ -238,7 +246,7 @@ input{
 .post > p{
     margin: 5px;
     margin-left: 30px;
-    font-size: 0.95rem;
+    font-size: 1rem;
 }
 .post > h5{
     text-align: end;
@@ -353,7 +361,10 @@ input{
     height: auto;
     max-width: 600px;
     padding: 5px;
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
     font-size: 1rem;
+    line-height: 1.4;
     margin: 5px;
 }
 .text img{

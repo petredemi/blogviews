@@ -193,7 +193,7 @@ function getBlogAuthors(){
         headers: {
             "Accept": "application/json",
             "contentType": "application/json",
-           "Authorization": "Bearer " +token,
+            "Authorization": "Bearer " +token,
            },
         success: (data, status) =>{
           //document.querySelector('.spinner').style.display = 'flex';
