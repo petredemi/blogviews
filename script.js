@@ -127,7 +127,7 @@ $("#signupform").off('submit').submit(function(){
        });
         $('#requestaut').toggle('checked')
         $(".signupdiv").hide()
-      $("#signupform")[0].reset()
+        $("#signupform")[0].reset()
          return false;
     });
 
