@@ -154,7 +154,11 @@ $("#signupform").off('submit').submit(function(){
               //location.reload()
               getBlogAuthors()
               getBlogArticles()
-           }
+           },
+           error: (error) => {
+            console.log(error);
+            console.log('error loading')
+        }
        });
             $("#loginform")[0].reset()
             $(".logindiv").slideUp("slow")
@@ -199,7 +203,7 @@ function getBlogAuthors(){
           //document.querySelector('.spinner').style.display = 'flex';
             if(status == 'success'){
             let authors = data.authors
-            logeduser = data.authData.user.id
+           // logeduser = data.authData.user.id
             let logeduserData = data.authData.user
             sessionexpire = data.authData.exp
             logeduser = logeduserData.id
@@ -312,6 +316,9 @@ function getBlogArticles(){
                     } `)
                 
                     mouseOverPosts()
+                    if(logeduser == undefined){
+                      $('.addcomment').hide()
+                    }
                 //    mouseOverAuthors(logeduser)
                   //  delCommentId()
                 }
@@ -510,3 +517,5 @@ async function delCommentId(){
          return false;
       });
  //   }
+
+ ///https://myblog-62pt.onrender.com
