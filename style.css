@@ -332,6 +332,9 @@ input{
 .delcomment{
     display: none;
 }
+.addcomment{
+    display: none;
+}
 
 .message{
     border: 1px solid black;

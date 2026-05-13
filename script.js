@@ -122,7 +122,7 @@ $("#signupform").off('submit').submit(function(){
             $("#reqmembbtn").show()
            // location.reload()
             getBlogAuthors()
-            getBlogArticles()
+           // --getBlogArticles()
            }
        });
         $('#requestaut').toggle('checked')
@@ -153,7 +153,7 @@ $("#signupform").off('submit').submit(function(){
   
               //location.reload()
               getBlogAuthors()
-              getBlogArticles()
+            //---  getBlogArticles()
            },
            error: (error) => {
             console.log(error);
@@ -199,7 +199,7 @@ function getBlogAuthors(){
             "contentType": "application/json",
             "Authorization": "Bearer " +token,
            },
-        success: (data, status) =>{
+        success: async (data, status) =>{
           //document.querySelector('.spinner').style.display = 'flex';
             if(status == 'success'){
             let authors = data.authors
@@ -215,6 +215,7 @@ function getBlogAuthors(){
                 $(".personal").show()
                 $('.authorslist').show()
                 $("#reqmembbtn").show()
+              await $('.addcomment').show()
               }
             
 
@@ -274,7 +275,7 @@ function getBlogArticles(){
                     "contentType": "application/json",
                  //   "Authorization": "Bearer " +token,
                 },
-                success: function(data, status){
+                success: async function(data, status){
                 // const token = localStorage.getItem('blogposttoken')
                 if(status == 'success'){
                     const authData = data.authData
@@ -316,11 +317,13 @@ function getBlogArticles(){
                     } `)
                 
                     mouseOverPosts()
-                    if(logeduser == undefined){
-                      $('.addcomment').hide()
-                    }
                 //    mouseOverAuthors(logeduser)
                   //  delCommentId()
+                  console.log(logeduser)
+                  if(logeduser){
+                      console.log(logeduser)
+                      $('.addcomment').show()
+                  }
                 }
             },
                 error:  (error) => {
@@ -517,5 +520,8 @@ async function delCommentId(){
          return false;
       });
  //   }
+
+
+
 
  ///https://myblog-62pt.onrender.com
