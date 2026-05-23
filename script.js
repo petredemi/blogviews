@@ -127,6 +127,7 @@ $("#signupform").off('submit').submit(function(){
             $("#logout").show()
             $("#uploadpic").show()
             $("#reqmembbtn").show()
+            $('.logopic').hide()
            // location.reload()
             getBlogAuthors()
            // --getBlogArticles()
@@ -168,6 +169,7 @@ $("#signupform").off('submit').submit(function(){
         }
        });
             $("#loginform")[0].reset()
+            $('.logopic').hide()
             $(".logindiv").slideUp("slow")
           return false
     });
@@ -221,6 +223,7 @@ function getBlogAuthors(){
                 $("#uploadpic").show()
                 $(".personal").show()
                 $('.authorslist-----').show()
+                $('.logopic').hide()
                 $("#reqmembbtn").show()
                  $(".showauthors").show()
               await $('.addcomment').show()
@@ -333,6 +336,7 @@ function getBlogArticles(){
                       console.log(logeduser)
                       $('.addcomment').show()
                       $('.intro2').hide()
+                      $('.logopic').hide()
                   }                  
                 }
             },
