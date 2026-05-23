@@ -49,7 +49,10 @@ $(document).ready(function(){
      }
     // mouseOverPosts()
 }) */
-
+$('.aboutcuisine').click(function(){
+  $('.intro2').slideToggle().css({'position':'absolute'}) 
+  $('.authorslist').hide()
+})
 $(document).ready(function(){
   $("#signup").click(function(){
     $(".signupdiv").slideToggle("slow")
@@ -59,6 +62,7 @@ $(document).ready(function(){
     $('#newprofession').val('')
     $('#requestauth').val('')
     $(".logindiv").slideUp("slow")
+    $('.intro2').hide()
   //  $(".memberreqdiv").slideUp("slow")
   });
 });
@@ -68,6 +72,7 @@ $(document).ready(function(){
     $('#logemail').val('')
     $('#logpassword').val('')
     $(".signupdiv").slideUp("slow")
+    $('.intro2').hide()
    // $(".memberreqdiv").slideUp("slow")
   });
 });
@@ -76,6 +81,7 @@ $(document).ready( function(){
       //  if(!blogauthorright){return}
     $('.uploadprofiles').slideToggle('').css('display', 'flex')
     $(".memberreqdiv").slideUp("slow")
+     $('.intro2').hide()
    })
 })
 $(document).ready(function(){
@@ -85,7 +91,8 @@ $(document).ready(function(){
     $('#requestmember').val('')
    // $(".signupdiv").slideUp("slow")
    // $(".logindiv").slideUp("slow")
-     $('.uploadprofiles').slideUp("slow")
+    $('.uploadprofiles').slideUp("slow")
+    $('.intro2').hide()
   });
 });
 
@@ -213,12 +220,11 @@ function getBlogAuthors(){
                 $("#logout").show()
                 $("#uploadpic").show()
                 $(".personal").show()
-                $('.authorslist').show()
+                $('.authorslist-----').show()
                 $("#reqmembbtn").show()
+                 $(".showauthors").show()
               await $('.addcomment').show()
               }
-            
-
              function userPicture(x){
                 if (x.profile == null){
                     return '<div></div>'
@@ -247,8 +253,11 @@ function getBlogAuthors(){
               $('.linktoblog').show()
               $('.authorsheader').children('p').hide()
            }
-        }
-
+           $('.showauthors').click( function(){
+              $('.authorslist').slideToggle().css({'position':'absolute'})
+              $('.intro2').hide()
+            })
+          }
         },
         error: (error) => {
             console.log(error);
@@ -323,7 +332,8 @@ function getBlogArticles(){
                   if(logeduser){
                       console.log(logeduser)
                       $('.addcomment').show()
-                  }
+                      $('.intro2').hide()
+                  }                  
                 }
             },
                 error:  (error) => {
@@ -332,7 +342,10 @@ function getBlogArticles(){
             })
     })
 }
+
 getBlogArticles()
+ $('.intro2').hide()
+
 async function getPostComments(x){
     const token = localStorage.getItem('blogposttoken')
     $.ajax({
@@ -425,9 +438,7 @@ async function uploadProfilePic(x){
          return false;
     });
   }
-
 //uploadProfilePic(logeduser)
-
 async function addCommentId(){
   $('.addcomment').off('click').click(function(){
       let c = ($(this).attr('id')).slice(4)

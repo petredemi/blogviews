@@ -44,6 +44,7 @@ body{
     padding:1px;
     
 }
+
 button{
     font-size: 0.95rem;
     padding: 3px;
@@ -54,6 +55,14 @@ button{
 h1{
     margin: 20px;
     color: rgb(38, 8, 51);
+}
+.logopic{
+    max-width: 130px;
+    margin-right: 20px;
+}
+.logopic >img{
+    max-width: 130px;
+    margin: 5px;
 }
 h4{
     margin: 1px;
@@ -110,6 +119,7 @@ h6{
     display: none;
     position: absolute;
     box-shadow: 1px 1px 8px darkblue;
+    z-index: 4;
 }
 label{
     min-width:80px;
@@ -141,6 +151,25 @@ input{
 .intro1{
     padding-top: 1px;
 }
+.intro2{
+    margin-bottom: 10px;
+    position: relative;
+    max-width: 800px;
+    z-index: 4;
+    display: none;
+    background-color: rgba(252, 245, 234, 0.885);
+    box-shadow: 1px 1px 5px black;
+}
+.intro2 >p{
+    position: absolutes;
+}
+.whattoeat{
+    position: relative;
+    z-index: 1;
+}
+.whattoeat >ul{
+    position: absolutes;
+}
 .linktoblog{
     display: none;
     font-size: 0.9rem;
@@ -151,10 +180,15 @@ input{
     margin: 10px;
     padding: 10px;
     display: none;
+    position: absolute;
     background-image: url('picture/travelgreece.jpg')mm;
-    background-color: cadetblue;
+    background-color: rgba(95, 158, 160, 0.805);
     background-position:bottom;
     background-size: cover;
+    z-index: 3;
+}
+.showauthors{
+    display: none;
 }
 .authorsheader{
     display: flexc;
@@ -208,6 +242,9 @@ input{
 .postslist{
     width: 100%d;
 }
+.posts{
+    margin: 10px;
+}
 .post{
     max-width: 600px;
     height: fit-content;
@@ -240,7 +277,7 @@ input{
     max-width: 300px;
     max-height: 300px;
     float: left;
-    margin-right: 20px;
+    margin-right: 10px;
     margin-bottom: 5px;
 }
 .post > p{
