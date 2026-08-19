@@ -292,6 +292,7 @@ function getBlogArticles(){
                 if(status == 'success'){
                     const authData = data.authData
                     const posts = data.messages
+                    console.log(posts)
                     let authx = data.authornames
                     function findName(y){
                         let us = authx.find(x => x.id == y)
