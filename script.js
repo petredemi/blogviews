@@ -269,8 +269,7 @@ function getBlogAuthors(){
    /// return false
  })
 }
-getBlogAuthors()
-
+//getBlogAuthors()
 function getBlogArticles(){
     $(document).ready(function(){
             let token = localStorage.getItem('blogposttoken')
@@ -294,10 +293,15 @@ function getBlogArticles(){
                     const posts = data.messages
                     console.log(posts)
                     let authx = data.authornames
+                    console.log(authx)
                     function findName(y){
                         let us = authx.find(x => x.id == y)
                          return us.name
                         }
+                    function findProfilePic(y){
+                      let us = authx.find(x => x.id == y)
+                      return us.profile
+                    }
                     function postPic(x){
                         if (x.picture == null){
                             return `<div></div>`
@@ -309,16 +313,21 @@ function getBlogArticles(){
                     $('.posts'). html(`${
                             posts.map(post => `
                                 <div class= 'post ${post.authorId}' id="post${post.id}" >
+                                    <div class = "authprofile">
+                                      <img src= "${findProfilePic(post.authorId)}" width="auto" alt = "picture">
+                                      <h5> Author: ${findName(post.authorId)}</h5>
+                                    </div>
                                     <div class= "postcontent">
                                         ${postPic(post)}
-                                        <h4> ${post.title} </h4>
-                                        <p> ${post.content} </p>
+                                        <div>
+                                            <h4> ${post.title} </h4>
+                                            <p> ${post.content} </p>
+                                        </div>
                                     </div>
                                     <div class="authdate">
                                         <div class= 'pdate'>posted on: ${addDate(post)} </div>
-                                        <h5> Author: ${findName(post.authorId)}</h5>
                                     </div>
-                                    <div class="postbuttons" >
+                                     <div class="postbuttons" >
                                         <button class="addcomment" id="cadd${post.id}">add comment</button>
                                         <button class="postcomments">comments</button>
                                     </div>
@@ -347,7 +356,7 @@ function getBlogArticles(){
             })
     })
 }
-
+                                                        
 getBlogArticles()
  $('.intro2').hide()
 
@@ -450,7 +459,7 @@ async function addCommentId(){
        $(`#post${tm}`).children(".comments").hide()
        $(`#formc${tm}`).children().show()
        let form = `
-          <form class='commentform' action="https://myblog-62pt.onrender.com/message/${c}/comment" method="post">
+          <form class='commentform' action="//localhost:3000/message/${c}/comment" method="post">
             <label for= "commenttext">comment</label>
             <textarea type="text" name="commenttext" id="commenttext" rows='4' cols='40'></textarea>
             <button type='submit' class="submitcom">submit</button>
@@ -495,7 +504,7 @@ async function delCommentId(){
       let c = ($(this).attr('id')).slice(4)
       console.log(c)
          $.ajax({
-        url: `https://myblog-62pt.onrender.com/message/${tm}/comments/${c}`, 
+        url: `/message/${tm}/comments/${c}`, 
         type: 'DELETE',
         headers: {
             //"Accept": "application/json",
@@ -540,4 +549,9 @@ async function delCommentId(){
 
 
 
- ///https://myblog-62pt.onrender.com
+ /////localhost:3000
+
+ /*
+import routes from './routes/index.js';
+
+ */
