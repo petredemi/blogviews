@@ -4,11 +4,12 @@ let cc = $('#requestauth:checked').val()
 console.log(typeof Boolean(cc))
 let tm  //get post id number
 let logeduser
+let loggeduseremail
 let sessionexpire
 
 function addDate(d){
         let day = new Date(d.createdAt)
-        let month = ['null','Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        let month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
         let dd = day.getDate()
         let m = day.getMonth()
         let mm = month[m]
@@ -18,16 +19,16 @@ function addDate(d){
         console.log(day.getUTCDate())
         return dd+'.'+ mm + '.'+ yy + '  ' + hh + ':'+ min 
     }
+
 $(document).ready(function(){
     $('.app').click(function(){
       if(sessionexpire != undefined){
         let nowdateseconds = new Date().getTime() - 10
-        let expire = sessionexpire + '000'
-        if(Number(expire) < nowdateseconds || expire == undefined){
+        let expire = sessionexpire + '0000'
+        if(Number(expire) < nowdateseconds ){//|| expire == undefined){
           localStorage.removeItem('blogposttoken') 
-          location.reload(true)         
-           console.log('session expired'
-           )
+          location.reload()         
+           console.log('session expired')
         }else{
           console.log(nowdateseconds)
           console.log(expire)
@@ -36,7 +37,6 @@ $(document).ready(function(){
       }
     })
   })
-
 /* $(document).ready(async function(){
      if(localStorage.getItem('blogposttoken') != undefined){        
                 $("#signup").hide()
@@ -214,9 +214,10 @@ function getBlogAuthors(){
             let authors = data.authors
            // logeduser = data.authData.user.id
             let logeduserData = data.authData.user
+            loggeduseremail = data.authData.user.email
             sessionexpire = data.authData.exp
             logeduser = logeduserData.id
-            if( logeduser != undefined){
+            if( localStorage.getItem('blogposttoken')){// logeduser != undefined){
                 $("#signup").hide()
                 $("#login").hide()
                 $("#logout").show()
@@ -227,7 +228,7 @@ function getBlogAuthors(){
                 $("#reqmembbtn").show()
                  $(".showauthors").show()
               await $('.addcomment').show()
-              }
+              }else{return}
              function userPicture(x){
                 if (x.profile == null){
                     return '<div></div>'
@@ -241,13 +242,14 @@ function getBlogAuthors(){
                 author => `
                   <div class='author' id="${author.id}">
                     ${userPicture(author)}
-                    <h6></h6>
-                    <h5>${author.name} </h5>
-                    <p> ${author.profession} </p>
-                    
+                    <div class = 'authordetails'>
+                        <h6></h6>
+                        <h5>${author.name} </h5>
+                        <p> ${author.profession} </p>
+                    </div>
                   </div>
               `).join(' ')} `)
-            $("#1").children('h6').text('blog admin')
+            $(".authordetails").children('h6').text('blog admin')
             $('.whattoeat').hide()
             $('.intro1').hide()
            //   uploadProfilePic()
@@ -269,7 +271,7 @@ function getBlogAuthors(){
    /// return false
  })
 }
-//getBlogAuthors()
+getBlogAuthors()
 function getBlogArticles(){
     $(document).ready(function(){
             let token = localStorage.getItem('blogposttoken')
@@ -293,6 +295,7 @@ function getBlogArticles(){
                     const posts = data.messages
                     console.log(posts)
                     let authx = data.authornames
+                //    sessionexpire = data.authData.exp
                     console.log(authx)
                     function findName(y){
                         let us = authx.find(x => x.id == y)
@@ -459,7 +462,7 @@ async function addCommentId(){
        $(`#post${tm}`).children(".comments").hide()
        $(`#formc${tm}`).children().show()
        let form = `
-          <form class='commentform' action="//localhost:3000/message/${c}/comment" method="post">
+          <form class='commentform' action="https://myblog-62pt.onrender.com/message/${c}/comment" method="post">
             <label for= "commenttext">comment</label>
             <textarea type="text" name="commenttext" id="commenttext" rows='4' cols='40'></textarea>
             <button type='submit' class="submitcom">submit</button>
@@ -504,7 +507,7 @@ async function delCommentId(){
       let c = ($(this).attr('id')).slice(4)
       console.log(c)
          $.ajax({
-        url: `/message/${tm}/comments/${c}`, 
+        url: `https://myblog-62pt.onrender.com/message/${tm}/comments/${c}`, 
         type: 'DELETE',
         headers: {
             //"Accept": "application/json",
