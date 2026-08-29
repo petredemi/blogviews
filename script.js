@@ -249,7 +249,7 @@ function getBlogAuthors(){
                     </div>
                   </div>
               `).join(' ')} `)
-            $(".authordetails").children('h6').text('blog admin')
+            $("#1 h6").text('blog admin')
             $('.whattoeat').hide()
             $('.intro1').hide()
            //   uploadProfilePic()
