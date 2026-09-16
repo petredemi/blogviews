@@ -11,39 +11,89 @@
     <link rel="icon" type="image/png" href="picture/icon2.png" sizes="192x192">
     <link rel="stylesheet" href="style.css">
     <link rel="canonical" href="https://european-cuisine.netlify.app">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Plus+Jakarta+Sans:wght@500;600&display=swap" rel="stylesheet">
 
-    <title>Blog about european cuisine, european dishes</title>
-    <meta name="description" content="Blog about the best food in Europe by country, Share your favorite food 
-    from Europe, Post food recipes,  what do european eat, must eat when you travel through europe ">
-    <meta name="keywords" content="european dishes, travel through Europe, european food, recipes from Europe, cuisine in Europe, the most popular food of Europe, the best recipes
-    what to eat in England, What to eat in France, what to eat in Spain, what to eat in Italy, what to eat in Germany,
-    what to eat in east Europe, food from Austria, food from Greece, polish dishes, turkish food">
+    <!-- Primary Meta Tags -->
+<title>Continental Bites | European Culinary Journeys & Classic Recipes</title>
+<meta name="title" content="Continental Bites | European Culinary Journeys & Classic Recipes">
+<meta name="description" content="Discover authentic recipes, regional wine pairings, and culinary travel stories from across Europe. Explore traditional dishes and modern continental gastronomy.">
+<meta name="keywords" content="European cuisine, authentic European recipes, culinary travel, Continental Bites, food blog, continental gastronomy, wine pairing">
+<meta name="author" content="Continental Bites">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#2d3238">
+<link rel="canonical" href="https://continentalbites.com/">
 
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://continentalbites.com/">
+<meta property="og:site_name" content="Continental Bites">
+<meta property="og:title" content="Continental Bites | European Culinary Journeys & Classic Recipes">
+<meta property="og:description" content="Discover authentic recipes, regional wine pairings, and culinary travel stories from across Europe.">
+<meta property="og:image" content="https://continentalbites.com/images/og-preview.jpg">
+<meta property="og:image:alt" content="Continental Bites - European cuisine logo and dishes">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_GB">
+
+<!-- Twitter / X Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://continentalbites.com/">
+<meta name="twitter:title" content="Continental Bites | European Culinary Journeys & Classic Recipes">
+<meta name="twitter:description" content="Discover authentic recipes, regional wine pairings, and culinary travel stories from across Europe.">
+<meta name="twitter:image" content="https://continentalbites.com/images/og-preview.jpg">
 </head>
 <body>
-<div class="app">
+
    <div class="tophead">
-    <div class="top">
-        <h1>European cuisine</h1>
-        <div class="logopic"><img src="picture/logopic1.png" width="200px" alt=""></div>
+      <div class="top">
+        <div class="brand">
+        <svg class="brand-badge" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Outer Compass Ring -->
+          <circle cx="50" cy="50" r="45" stroke="#d4af37" stroke-width="2" stroke-opacity="0.4" />
+          <circle cx="50" cy="50" r="41" stroke="#d4af37" stroke-width="1.2" />
+          <circle cx="50" cy="50" r="28" stroke="#d4af37" stroke-width="1" stroke-dasharray="2 3" stroke-opacity="0.6" />
+
+          <!-- Compass Star Points -->
+          <polygon points="50,6 54,42 50,38 46,42" fill="#d4af37" />
+          <polygon points="50,94 54,58 50,62 46,58" fill="#d4af37" />
+          <polygon points="6,50 42,46 38,50 42,54" fill="#d4af37" />
+          <polygon points="94,50 58,46 62,50 58,54" fill="#d4af37" />
+
+          <!-- Diagonal Star Points -->
+          <polygon points="19,19 46,44 43,47" fill="#bfa043" opacity="0.8" />
+          <polygon points="81,19 54,44 57,47" fill="#bfa043" opacity="0.8" />
+          <polygon points="81,81 54,56 57,53" fill="#bfa043" opacity="0.8" />
+          <polygon points="19,81 46,56 43,53" fill="#bfa043" opacity="0.8" />
+
+          <!-- Wine Bottle Motif -->
+          <path d="M50 20 L51.5 29 L51.5 35 Q56 43 56 63 L44 63 Q44 43 48.5 35 L48.5 29 Z" fill="#2d3238" stroke="#f6f1e8" stroke-width="1.5" />
+          <!-- Wheat Sheaf Accent -->
+          <path d="M47 48 Q50 45 53 48 M46 53 Q50 50 54 53 M47 58 Q50 55 53 58" stroke="#d4af37" stroke-width="1.6" stroke-linecap="round" />
+        </svg>
+      <h1 class="brand-title">Continental<br><span>Bites</span></h1>
+    </div>
+
+
         <div class="personal">
             <div class="userpict"></div>
             <h4 id="logedin"></h4>
         </div>
-    </div>
-     <div id="loader">
-                <div class="spinner"></div> <!-- CSS Spinner here -->
-    </div>
-    <div class="buttons">
+    </div> 
+      <div id="loader">
+        <div class="spinner"></div> <!-- CSS Spinner here -->
+      </div>
+      <div class="buttons">
             <button id="signup">sign up</button>
             <button id="login"> log in</button>
             <button id="logout">log out</button>
             <button id="uploadpic">profile picture</button>
             <button id="reqmembbtn">request auth</button>
-    </div>
-  </div>
-    <div class="signupdiv">
-            <form  id="signupform" action="https://myblog-62pt.onrender.com/user" method="post" >
+       </div>
+       <div class="logforms">
+        <div class="signupdiv">
+            <form  id="signupform" action="http://localhost:3000/user" method="post" >
                 <li>
                     <label for="newname">name</label>
                     <input type="text" name="newname" id="newname" required>
@@ -68,7 +118,7 @@
             </form>
         </div> 
         <div class="logindiv">
-            <form id="loginform" action="https://myblog-62pt.onrender.com/log-in" method="post">
+            <form id="loginform" action="http://localhost:3000/log-in" method="post">
                 <li>
                     <label for="logemail">email </label>
                     <input type="email" name="logemail" id="logemail">
@@ -80,8 +130,8 @@
                 <button type="submit" style="width: 60px;"  id="loguser">submit</button>
             </form>
         </div>
-                <div class="uploadprofiles">
-            <form class="uploadImage"  action="https://myblog-62pt.onrender.com/picture" method="post" enctype="multipart/form-data">
+        <div class="uploadprofiles">
+            <form class="uploadImage"  action="http://localhost:3000/picture" method="post" enctype="multipart/form-data">
                 <li style="font-size: 0.9rem;">max-size 1Mb, recomended dimension 200 x 200 px </li>
                 <input type="file" name="profileimg"  id="profileimg" />
                 <input type="submit" value="upload img" class="uploadbtn" style="width: fit-content;">
@@ -89,7 +139,7 @@
         </div>
 
         <div class="memberreqdiv">
-            <form  id="requestform" action="https://myblog-62pt.onrender.com/user/memberrequest" method="post" >
+            <form  id="requestform" action="http://localhost:3000/user/memberrequest" method="post" >
                 <li style="font-size: 0.9rem;">requires blog administrator aproval</li>
                 <li>
                     <label for="memprofession" class="label">profession</label>
@@ -101,34 +151,40 @@
                 </li>
                 <button type="submit" style="width: 60px;"  id="submitreqmem" value= 'Submit'>submit</button>
             </form>
-        </div> 
-        <div class="intro intro1">
-            <p><b>Sign up </b><em>to have access to more local cuisine from Europe, to add comments, become 
-                a blog author to share experiences, food and cooking styles. Post your 
-                favorit food and your culinary experience from accross europe. Share a nice restaurant from 
-                your trip which impressed you.</em>
-            </p>
         </div>
+    </div>
+  </div>
+<div class="app">
+        <section class="about-hero">
+            <div class="container about-content">
+            <h1>Discover authentic European cuisine through fellow travelers.</h1>
+            <p>
+                European dining is shaped by centuries of regional identity, seasonal terroir, and time-honored cooking traditions. From wood-fired Neapolitan dough and slow-simmered Spanish stews to crisp butter pastries in France and rustic mountain dishes across Central and Eastern Europe, every region tells a distinct culinary story. Here, travelers share the dishes, village taverns, and hidden eateries that made their trips unforgettable.
+            </p>
+            </div>
+        </section>
+        
         <div class="about" style="margin-left: 20px;">
              <button class="aboutcuisine">about european cuisine</button>
              <button class="showauthors">about authors</button>
         </div>
         <div class="intro intro2">
-            <p><b>European cuisine</b> <em>is diverse and varies by country, but it generally features fresh, seasonal
-            ingredients, bold flavors, and a variety of cooking techniques. Europe's kitchen has a large variety of dishes because 
-            it comprise more than 30 countries, each one with their own styles and culinary habits. 
-            European cuisine uses fresh, locally sourced ingredients like fruits, vegetables, meats, and seafood. 
-            Meat is more prominent in European cuisine than in East Asian cooking, and dairy products are also widely used. </em></p>
+            <p><strong>Continental Bites</strong> <em>
+                is an ongoing culinary expedition across Europe’s vibrant terroir. 
+                From sun-ripened Mediterranean olive groves and alpine cheese cellars to centuries-old Nordic smokehouses, 
+                European gastronomy is shaped by regional tradition, seasonality, and time-honored craftsmanship. 
+                Whether exploring everyday rustic comfort foods or refined bistro classics, every plate carries a distinct sense of place.
+        </em></p>
             <div class="whattoeat">
                 <ul>
-                    <li>&#129477; What to eat in europe?</li>
-                    <li>&#127813; which are the most popular food dishes in europe?</li>
-                    <li>&#129382; which are the traditional food by each country in europe?</li>
-                    <li>&#129388; What can I eat in France, the best known everyday dishes?</li>
-                    <li>&#127849; What is recomended to eat in England?</li>
-                    <li>&#127829; What is the best food in Italy?</li>
-                    <li>&#127863; What food dishes are most beloved in Spain ?</li>
-                    <li>&#129379; Do you want your favorite dish to share on internet?</li>
+                  <li>&#129477; Regional Specialties: What defines classic European comfort food?</li>
+                  <li>&#127813; The Essentials: Iconic dishes every food traveler must try</li>
+                  <li>&#129382; Terroir & Tradition: How micro-climates shape local delicacies</li>
+                  <li>&#129388; French Classics: Beyond the bistro—everyday regional dining</li>
+                  <li>&#127849; British Fare: Reinventing hearty classics & artisanal traditions</li>
+                  <li>&#127829; Italian Heritage: The simple art of hyper-local regional cooking</li>
+                  <li>&#127863; Spanish Tapas: Small plates, bold Iberian flavors, and aperitivo culture</li>
+                  <li>&#129379; Share Your Plate: Have a cherished family recipe to contribute?</li>
 
                 </ul>
             </div>
@@ -149,43 +205,15 @@
         <div class="posts"></div>
     </div>
     <div id="newuser"></div>
+
     <div id="div1"></div>
-    <div class="food">
-    <div class="itm">
-        <div class="item">
-            <p class="text" style="font-size: 0.9rem;">
-            <img src="./picture/paella-market.jpg" style="float: left;" max-width="400px" alt="paella dish">
-            <h3>Paella, a spanish dish in London</h3>
-            <strong>Spanish cuisine</strong> is known for dishes like paella, tapas, and jamón ibérico 
-                   and has spread in many countries, including through colonization, cultural 
-                   influences, and international recognition. In Great Britain paella can be found very easy in restaurants 
-                   and food stalls. Here a beloved paella shop in <strong> Borough Market </strong> in the city of London, oldest market in London, 
-                   you must see and taste the food, is one of the most 
-                   photographed food plate in the market, it is as well wide spred throughout London's markets
-                   and restaurants.
-            </p>
-        </div>
-    </div>
-    <!--
-    <div class="itm" style="justify-content: end;">
-        <div class="item">
-            <p class="text">
-            <img src="./picture/fishandchips.png" style="float: right;" max-width="300px" alt="a plate of fish and chips">
-            <h3>Fish and chips in London</h3>
-            Fish and chips is one of the most beloved UK dish featuring the best battered fish (usually cod or haddock) and fried potatoes, 
-            typically served with tartar sauce, mushy peas, and salt/vinegar. Top-rated traditional spots include Poppies (London) 
-            and award-winning shops like Yarm Road Fish and Chips. Best enjoyed freshly fried from a local "chippy" or restaurants and markets 
-            with prices often ranging from £7-£15. The Britain surrounded by sea the people love fish dishes and you will 
-            find fish shops throughout London and cities from UK.
-            </p>
-        </div>
-    </div>  -->
-    </div>
 
 <footer>
     <p style="margin-bottom: 3px;">Copyright &#169; 2025 DPC.webdesign</p>
     <a href="https://www.dpcwebdesign.uk" >https://www.dpcwebdesign.uk</a>
 </footer>
 </div>
+<!-- Structured Data (Schema.org JSON-LD for Search Engines) -->
+
 </body>
 </html>

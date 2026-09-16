@@ -1,14 +1,65 @@
+:root {
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  
+  --bg-color: #faf7f2;
+  --card-bg: #ffffff;
+  --text-main: #2a2825;
+  --text-muted: #6e6b66;
+  --primary: #c25430;      /* Warm terracotta */
+  --primary-hover: #a84323;
+  --border-color: #ede6dc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 .dceer{
     border: 1px solid red;
     margin: 4px;
 }
 
-body{
+.kbody{
     background-color: rgb(252, 245, 234);
     font-size: 20px;
     padding: 0px;
     margin: 0px;
 }
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+
+/* --- About European Cuisine --- */
+.about-hero {
+  padding: 1.5rem 0 1.5rem;
+  text-align: center;
+}
+
+.about-content h1 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+}
+
+.about-content p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
 #loader {
   position: fixed;
   top: 15%;
@@ -39,30 +90,28 @@ body{
 
 .app{
     background-color: rgb(229, 248, 248ddf);
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
     padding:1px;
     
 }
+
 
 button{
     font-size: 0.95rem;
     padding: 3px;
 }
 .buttons{
-    margin-left: 20px;
+    margin:auto;
+    max-width: 900px;
 }
 h1{
     margin: 20px;
-    color: rgb(38, 8, 51);
+    color: rgb(50, 17, 61);
 }
 .logopic{
     max-width: 130px;
     margin-right: 20px;
-}
-.logopic >img{
-    max-width: 130px;
-    margin: 5px;
 }
 h4{
     margin: 1px;
@@ -77,18 +126,17 @@ h6{
     background-color:rgb(213, 234, 215);
     box-shadow: 1px 1px 10px black;
     padding-bottom: 5px;
-    margin-bottom: 10px;
-    background: linear-gradient(20deg, transparent 250px, #0d0c0c 0)ddd;
+    margin:auto;
 }
 .top{
-    
     display: flex;
     justify-content: space-between;
-    height: 120px;
-    margin-bottom: 30pxdd;
+    max-height: 170px;
+    max-width: 900px;
+    margin: auto;
     padding: 6px;
 }
-.personal{
+.personalff{
     height: fit-content;
     display: none;
     margin-right: 20px;
@@ -107,6 +155,10 @@ h6{
     padding: 2px;
     border: 1px solid blue;
     background-color:antiquewhite;
+}
+.logforms{
+    max-width: 900px;
+    margin: auto;
 }
 
 #logout, #uploadpic, #reqmembbtn{
@@ -132,8 +184,12 @@ li{
     margin: 8px;
     justify-content: space-between;
 }
+
 input{
     width: 230px;
+}
+.about{
+    margin-top: 20px;
 }
 .about > button{
     border: none;
@@ -145,6 +201,230 @@ input{
 #requestauth, #requestmember{
     width: auto;
 }
+
+
+/*new header top */
+:root { /* for badge */
+  --bg-slate: #2d3238;
+  --bg-slate-dark: #22262a;
+  --surface-slate: #353b42;
+  --text-cream: #f6f1e8;
+  --text-muted: #9ba1a8;
+  --accent-gold: #d4af37;
+  --accent-gold-hover: #bfa043;
+  --border-slate: rgba(212, 175, 55, 0.25);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand-badge {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
+}
+
+.brand-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-cream);
+  line-height: 1.05;
+}
+
+.brand-title span {
+  color: var(--text-cream);
+  letter-spacing: 0.12em;
+}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --bg-cream: #faf7f2;
+  --surface-card: #ffffff;
+  --text-dark: #23201d;
+  --text-muted: #7c746b;
+  --accent-terracotta: #b84a39;
+  --accent-terracotta-hover: #9c3c2e;
+  --border-light: rgba(124, 116, 107, 0.22);
+}
+
+.tophead {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-slate);
+  border-bottom: 1px solid var(--border-slate);
+}
+
+/* Top Header Bar */
+.top {
+  background-color: var(--bg-slate);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.topf h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-dark);
+}
+
+.personal {
+    height: fit-content;
+    display: none;
+    margin-right: 20px;
+    text-align: end;
+}
+
+.userpict {
+  background-size: cover;
+  background-position: center;
+    margin-top: 20px;
+    height: 80px;
+}
+
+#logedin {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-cream);
+}
+
+/* Spinner */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--border-light);
+  border-top-color: var(--accent-terracotta);
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Action Buttons Bar */
+.buttons button {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.02em;
+  border-radius: 6px;
+  border: 1px solid var(--border-light);
+  background-color: var(--surface-card);
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 5px;
+  padding: 3px;
+}
+
+.buttons button:hover {
+  background-color: #f2ece4;
+  border-color: var(--text-muted);
+}
+
+.buttons #signup {
+  background-color: var(--accent-terracotta);
+  border-color: var(--accent-terracotta);
+  color: #ffffff;
+}
+
+.buttons #signup:hover {
+  background-color: var(--accent-terracotta-hover);
+}
+
+/* Form Container Cards */
+.signupdiv,
+.logindiv,
+.uploadprofiles,
+.memberreqdiv {
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(35, 32, 29, 0.05);
+}
+
+.logforms form {
+  list-style: none;
+}
+
+.logforms li {
+  list-style: none;
+  color: var(--text-dark);
+}
+
+.logforms label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--text-dark);
+}
+
+.logforms input[type="text"],
+.logforms input[type="email"],
+.logforms input[type="password"],
+.logforms input[type="file"] {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-light);
+  background-color: #fff;
+  color: var(--text-dark);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.logforms input[type="text"]:focus,
+.logforms input[type="email"]:focus,
+.logforms input[type="password"]:focus {
+  border-color: var(--accent-terracotta);
+  box-shadow: 0 0 0 3px rgba(184, 74, 57, 0.12);
+}
+
+.logforms input[type="checkbox"] {
+  accent-color: var(--accent-terracotta);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.logforms li[style*="font-size: 0.9rem"] {
+  font-size: 0.8rem !important;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Form Action Buttons */
+.logforms button[type="submit"],
+.logforms .uploadbtn {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  background-color: var(--accent-terracotta);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.logforms button[type="submit"]:hover,
+.logforms .uploadbtn:hover {
+  background-color: var(--accent-terracotta-hover);
+}
+
+
+/* finished new style*/
+
+/*
 .intro{
     margin-top: 1px;
 }
@@ -178,6 +458,127 @@ input{
 .whattoeat >ul{
     position: absolutes;
 }
+
+/* Container & Button Controls  start about style*/
+.about {
+  display: flex;
+  gap: 0.75rem;
+  margin: 2rem 0 1.25rem 20px;
+}
+
+.aboutcuisine,
+.showauthors {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.03em;
+  padding: 0.55rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.aboutcuisine {
+  background-color: var(--accent-gold);
+  border: 1px solid var(--accent-gold);
+  color: var(--bg-slate-dark);
+}
+
+.aboutcuisine:hover {
+  background-color: var(--accent-gold-hover);
+  border-color: var(--accent-gold-hover);
+}
+
+.showauthors {
+  background-color: var(--surface-slate);
+  border: 1px solid var(--border-slate);
+  color: var(--text-dark);
+}
+
+.showauthors:hover {
+  background-color: #434a52;
+  border-color: var(--accent-gold);
+}
+
+/* Editorial Content Card */
+.intro {
+  background-color: var(--surface-slate);
+  border: 1px solid var(--border-slate);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+  margin: 0 20px 2rem 20px;
+  padding: 2rem;
+  z-index: 4;
+}
+
+.intro p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-cream);
+  margin-bottom: 1.5rem;
+}
+
+.intro p strong {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  letter-spacing: 0.02em;
+}
+
+.intro p em {
+  font-style: normal;
+  color: #d1d5db;
+}
+
+/* Question Prompt List */
+.whattoeat {
+  border-top: 1px solid var(--border-slate);
+  padding-top: 1.25rem;
+}
+
+.whattoeat ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.85rem;
+  padding: 0;
+  margin: 0;
+}
+
+.whattoeat li {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-cream);
+  background-color: var(--bg-slate-dark);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.whattoeat li:hover {
+  border-color: var(--accent-gold);
+  transform: translateX(3px);
+}
+
+.whattoeat li:last-child {
+  background-color: rgba(212, 175, 55, 0.08);
+  border-color: var(--accent-gold);
+  font-weight: 600;
+}
+
+/* finish about */
+
+
+
 .linktoblog{
     display: none;
     font-size: 0.9rem;
@@ -295,6 +696,9 @@ input{
     height: fit-content;
     padding: 1px;
 }
+.postcontent h4{
+    font-weight: 800;
+}
 
 .postcontent > img{
     max-width: 380px;
@@ -310,6 +714,7 @@ input{
     margin-top: 0px;
     margin-left: 20px;
     font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .post > h5{
     text-align: end;
@@ -368,6 +773,7 @@ input{
     display: block;
     position: relative;
     min-width: 380px;
+
 }
 .commentform{
     display: flex;
